@@ -46,7 +46,7 @@
 }
 
 .command .addBtn:hover {
-  background-color: #d8dee9;
+  background-color: #88c0d0;
   cursor: pointer;
 }
 
@@ -106,4 +106,21 @@
 
 .item .right .counter {
   color: #88C0D0;
+}
+
+#removeSelected,
+#removeAll {
+  border: none;
+  font-size: 1.4em;
+  padding: 12px;
+  cursor: pointer;
+  background-color: #2e3440;
+  color: #88c0d0;
+  margin: 8px 12px;
+}
+
+#removeSelected:hover,
+#removeAll:hover {
+  color: #2e3440;
+  background-color: #88c0d0;
 }
