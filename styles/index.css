@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+.is-hidden {
+  display: none;
+}
+
 .title {
   margin: 12px;
 }
@@ -12,4 +16,94 @@
   margin: 8px;
   margin-bottom: 22px;
   text-align: center;
+}
+
+.command-wrapper {
+  margin: 18px 0;
+}
+
+.command {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.command input {
+  font-size: 1.8em;
+  padding: 8px;
+  border: none;
+}
+
+.command .addBtn {
+  font-size: 1.8em;
+  padding: 8px;
+  background-color: #2e3440;
+  border: none;
+}
+
+.command .addBtn * {
+  color: #88c0d0;
+}
+
+.command .addBtn:hover {
+  background-color: #d8dee9;
+  cursor: pointer;
+}
+
+.command .addBtn:hover * {
+  color: #2e3440;
+}
+
+#error-msg {
+  color: #bf616a;
+  font-size: 1.2em;
+  margin-top: 4px;
+}
+
+#meals {
+  font-size: 2em;
+}
+
+.item {
+  width: 450px;
+  /* background-color: aquamarine; */
+  margin: 12px 0;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item .left,
+.item .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item .left input {
+  cursor: pointer;
+  transform: scale(1.5);
+  margin-right: 10px;
+}
+
+.item .right .like {
+  margin: 0 16px;
+}
+
+.item .right .like,
+.item .right .dislike{
+  cursor: pointer;
+}
+
+.item .right .like * {
+  color: #A3BE8C;
+}
+
+.item .right .dislike * {
+  color: #BF616A;
+}
+
+.item .right .counter {
+  color: #88C0D0;
 }

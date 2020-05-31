@@ -28,21 +28,21 @@
         <h1 class="title">Meal list</h1>
         <h2 class="subtitle">Add and Vote for the best meals here...</h2>
 
-        <div id="myDIV" class="header">
-          <input type="text" id="myInput" placeholder="Title..." />
-          <span onclick="newElement()" class="addBtn"
-            ><i class="fas fa-plus"></i
-          ></span>
+        <div class="command-wrapper">
+          <div class="command">
+            <input type="text" id="myInput" placeholder="Add new meal..." />
+            <button onclick="parseInput()" class="addBtn">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+          <span id="error-msg" class="is-hidden">Invalid input</span>
         </div>
 
-        <ul id="meals">
-          <li>Spagethi</li>
-          <li class="checked">Pay bills</li>
-          <li>Meet George</li>
-          <li>Buy eggs</li>
-          <li>Read a book</li>
-          <li>Organize office</li>
-        </ul>
+        <ul id="meals"></ul>
+        <div class="action">
+          <button id="removeSelected">Remove selected</button>
+          <button id="removeAll">Remove all</button>
+        </div>
       </div>
     </div>
 
