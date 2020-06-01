@@ -122,7 +122,7 @@ function parseInput() {
         'You have to get verified first! If you click "ok" you will be redirected to the verification tab. Cancel will return you back.'
       )
     ) {
-      window.location.href = "/verification.html";
+      document.getElementById("verificationLink").click();
     }
     myInput.value = "";
     return;
@@ -224,7 +224,7 @@ removeSelected.addEventListener("click", function removeSelected() {
         'You have to get verified first! If you click "ok" you will be redirected to the verification tab. Cancel will return you back.'
       )
     ) {
-      window.location.href = "/verification.html";
+      document.getElementById("verificationLink").click();
     }
     myInput.value = "";
     return;
@@ -250,7 +250,7 @@ removeAll.addEventListener("click", function removeAll() {
         'You have to get verified first! If you click "ok" you will be redirected to the verification tab. Cancel will return you back.'
       )
     ) {
-      window.location.href = "/verification.html";
+      document.getElementById("verificationLink").click();
     }
     myInput.value = "";
     return;
