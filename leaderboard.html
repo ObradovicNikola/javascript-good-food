@@ -9,6 +9,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
     />
     <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/leaderboard.css" />
   </head>
   <body>
     <div class="main">
@@ -18,39 +19,30 @@
         </div>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="is-active">About</a></li>
+          <li><a href="leaderboard.html" class="is-active">Leaderboard</a></li>
           <li><a href="verification.html">Verification</a></li>
         </ul>
       </header>
 
       <div class="content">
-        <h2>Add and Vote for the best meals here</h2>
-        <div id="app">
-          <p>Meal list</p>
+        <h1 id="not-enough" class="is-hidden">
+          There are not enough meals in the database!
+        </h1>
+        <div id="enough">
+          <h1>Here you can see top 3 meals:</h1>
+          <ol id="meals">
+            <li id="first">prva</li>
+            <li id="second">prva</li>
+            <li id="third">prva</li>
+          </ol>
         </div>
-
-        <div id="myDIV" class="header">
-          <h2 style="margin: 5px;">My To Do List</h2>
-          <input type="text" id="myInput" placeholder="Title..." />
-          <span onclick="newElement()" class="addBtn"
-            ><i class="fas fa-plus"></i
-          ></span>
-        </div>
-
-        <ul id="meals">
-          <li>Spagethi</li>
-          <li class="checked">Pay bills</li>
-          <li>Meet George</li>
-          <li>Buy eggs</li>
-          <li>Read a book</li>
-          <li>Organize office</li>
-        </ul>
       </div>
     </div>
+
     <footer>
       Obradovic Nikola
     </footer>
 
-    <!-- <script src="/scripts/main.js"></script> -->
+    <script src="/scripts/leaderboard.js"></script>
   </body>
 </html>

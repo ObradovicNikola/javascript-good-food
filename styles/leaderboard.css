@@ -1,0 +1,8 @@
+.content #meals{
+  padding: 26px;
+}
+
+#meals li {
+  margin: 12px;
+  font-size: 1.2em;
+}
