@@ -24,6 +24,4 @@ if (meals.length < 3) {
   first.innerHTML = meals[0].name + " (" + meals[0].likes + ")";
   second.innerHTML = meals[1].name + " (" + meals[1].likes + ")";
   third.innerHTML = meals[2].name + " (" + meals[2].likes + ")";
-
-  console.log(meals);
 }
