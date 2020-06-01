@@ -117,7 +117,13 @@ myInput.addEventListener("focus", resetError);
 function parseInput() {
   const verified = JSON.parse(localStorage.getItem("verified"));
   if (verified !== true) {
-    alert("You have to get verified first!");
+    if (
+      window.confirm(
+        'You have to get verified first! If you click "ok" you will be redirected to the verification tab. Cancel will return you back.'
+      )
+    ) {
+      window.location.href = "/verification.html";
+    }
     myInput.value = "";
     return;
   }
@@ -213,7 +219,13 @@ let removeAll = document.getElementById("removeAll");
 removeSelected.addEventListener("click", function removeSelected() {
   const verified = JSON.parse(localStorage.getItem("verified"));
   if (verified !== true) {
-    alert("You have to get verified first!");
+    if (
+      window.confirm(
+        'You have to get verified first! If you click "ok" you will be redirected to the verification tab. Cancel will return you back.'
+      )
+    ) {
+      window.location.href = "/verification.html";
+    }
     myInput.value = "";
     return;
   }
@@ -233,7 +245,13 @@ removeSelected.addEventListener("click", function removeSelected() {
 removeAll.addEventListener("click", function removeAll() {
   const verified = JSON.parse(localStorage.getItem("verified"));
   if (verified !== true) {
-    alert("You have to get verified first!");
+    if (
+      window.confirm(
+        'You have to get verified first! If you click "ok" you will be redirected to the verification tab. Cancel will return you back.'
+      )
+    ) {
+      window.location.href = "/verification.html";
+    }
     myInput.value = "";
     return;
   }
