@@ -1,14 +1,14 @@
 form {
   margin: 24px;
-  border: 1px solid ;
+  border: 1px solid;
   padding: 16px;
   font-size: 1.4em;
   max-width: 500px;
 }
 
-.content form input{
+.content form input {
   padding: 8px;
-  font-size: .8em;
+  font-size: 0.8em;
   color: black;
 }
 
