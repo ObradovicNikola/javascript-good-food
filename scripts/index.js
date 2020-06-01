@@ -115,6 +115,13 @@ function resetError() {
 myInput.addEventListener("focus", resetError);
 
 function parseInput() {
+  const verified = JSON.parse(localStorage.getItem("verified"));
+  if (verified !== true) {
+    alert("You have to get verified first!");
+    myInput.value = "";
+    return;
+  }
+
   const newMeal = myInput.value.replace(multiSpacePattern, " ").trim();
 
   if (newMeal == undefined || newMeal == "") {
@@ -165,29 +172,29 @@ function addItem() {
   };
 
   let inputCheks = newItem.getElementsByTagName("input");
-    for (let i = 0; i < inputCheks.length; i++) {
-      inputCheks[i].addEventListener("click", function hey() {
-        if (title.style.textDecoration == "line-through") {
-          title.style.textDecoration = "none";
-          for (let j = 0; j < meals.length; j++) {
-            if (meals[j].name == title.innerHTML) {
-              meals[j].checked = false;
-              // ovo se ne pise u local storage!
-              return;
-            }
-          }
-        } else {
-          title.style.textDecoration = "line-through";
-          for (let j = 0; j < meals.length; j++) {
-            if (meals[j].name == title.innerHTML) {
-              meals[j].checked = true;
-              // ovo se ne pise u local storage!
-              return;
-            }
+  for (let i = 0; i < inputCheks.length; i++) {
+    inputCheks[i].addEventListener("click", function hey() {
+      if (title.style.textDecoration == "line-through") {
+        title.style.textDecoration = "none";
+        for (let j = 0; j < meals.length; j++) {
+          if (meals[j].name == title.innerHTML) {
+            meals[j].checked = false;
+            // ovo se ne pise u local storage!
+            return;
           }
         }
-      });
-    }
+      } else {
+        title.style.textDecoration = "line-through";
+        for (let j = 0; j < meals.length; j++) {
+          if (meals[j].name == title.innerHTML) {
+            meals[j].checked = true;
+            // ovo se ne pise u local storage!
+            return;
+          }
+        }
+      }
+    });
+  }
 
   list.prepend(newItem);
   myInput.value = "";
@@ -204,6 +211,13 @@ let removeSelected = document.getElementById("removeSelected");
 let removeAll = document.getElementById("removeAll");
 
 removeSelected.addEventListener("click", function removeSelected() {
+  const verified = JSON.parse(localStorage.getItem("verified"));
+  if (verified !== true) {
+    alert("You have to get verified first!");
+    myInput.value = "";
+    return;
+  }
+
   for (let i = 0; i < meals.length; i++) {
     if (meals[i].checked) {
       meals.splice(i, 1);
@@ -217,6 +231,13 @@ removeSelected.addEventListener("click", function removeSelected() {
 });
 
 removeAll.addEventListener("click", function removeAll() {
+  const verified = JSON.parse(localStorage.getItem("verified"));
+  if (verified !== true) {
+    alert("You have to get verified first!");
+    myInput.value = "";
+    return;
+  }
+
   meals = [];
 
   localStorage.setItem("meals", JSON.stringify(meals));

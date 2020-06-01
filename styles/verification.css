@@ -1,0 +1,29 @@
+form {
+  margin: 24px;
+  border: 1px solid ;
+  padding: 16px;
+  font-size: 1.4em;
+  max-width: 500px;
+}
+
+.content form input{
+  padding: 8px;
+  font-size: .8em;
+  color: black;
+}
+
+.form-group {
+  margin: 12px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.action {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.content button {
+  font-size: 1em;
+  margin: 22px 0 0 12px;
+}

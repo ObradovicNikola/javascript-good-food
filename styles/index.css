@@ -28,26 +28,21 @@
   justify-content: center;
 }
 
-.command input {
+.command input,
+.command input:focus {
   font-size: 1.8em;
   padding: 8px;
   border: none;
 }
 
-.command .addBtn {
+.command button.addBtn {
   font-size: 1.8em;
   padding: 8px;
-  background-color: #2e3440;
-  border: none;
+  margin: 0;
 }
 
-.command .addBtn * {
+.command button.addBtn * {
   color: #88c0d0;
-}
-
-.command .addBtn:hover {
-  background-color: #88c0d0;
-  cursor: pointer;
 }
 
 .command .addBtn:hover * {
@@ -66,7 +61,6 @@
 
 .item {
   width: 450px;
-  /* background-color: aquamarine; */
   margin: 12px 0;
   padding: 8px;
   display: flex;
@@ -92,35 +86,18 @@
 }
 
 .item .right .like,
-.item .right .dislike{
+.item .right .dislike {
   cursor: pointer;
 }
 
 .item .right .like * {
-  color: #A3BE8C;
+  color: #a3be8c;
 }
 
 .item .right .dislike * {
-  color: #BF616A;
+  color: #bf616a;
 }
 
 .item .right .counter {
-  color: #88C0D0;
-}
-
-#removeSelected,
-#removeAll {
-  border: none;
-  font-size: 1.4em;
-  padding: 12px;
-  cursor: pointer;
-  background-color: #2e3440;
   color: #88c0d0;
-  margin: 8px 12px;
-}
-
-#removeSelected:hover,
-#removeAll:hover {
-  color: #2e3440;
-  background-color: #88c0d0;
 }
